@@ -1,5 +1,4 @@
 from seleniumbase import BaseCase
-import time
 
 class Employees(BaseCase):
 
@@ -30,7 +29,7 @@ class Employees(BaseCase):
         self.click(self.emp_menu_opt)
         self.assert_element(self.emp_heading)
         self.scroll_to_bottom()
-        # self.save_screenshot("see_emps_sc", "screenshots")
+        self.save_screenshot("see_emps_sc", "screenshots")
 
     def test_add_emp(self):
         self.open(self.workriv_link)
@@ -43,7 +42,7 @@ class Employees(BaseCase):
         self.send_keys(self.add_team_input, "Web Dev Team")
         self.click(self.add_emp_btn)
         self.scroll_to_bottom()
-        # self.save_screenshot("add_emp_sc", "screenshots")
+        self.save_screenshot("add_emp_sc", "screenshots")
 
     def test_edit_emp(self):
         self.open(self.workriv_link)
@@ -54,7 +53,7 @@ class Employees(BaseCase):
         self.clear(self.emp_edit_name_input)
         self.send_keys(self.emp_edit_name_input, "Mark")
         self.click(self.emp_edit_save)
-        # self.save_screenshot("edit_emp_sc", "screenshots")
+        self.save_screenshot("edit_emp_sc", "screenshots")
 
     def test_delete_emp(self):
         self.open(self.workriv_link)
@@ -62,4 +61,4 @@ class Employees(BaseCase):
         self.assert_element(self.emp_heading)
         self.scroll_to_bottom()
         self.click(self.emp_delete_btn)
-        # self.save_screenshot("delete_emp_sc", "screenshots")
+        self.save_screenshot("delete_emp_sc", "screenshots")
